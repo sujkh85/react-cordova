@@ -1,0 +1,28 @@
+.header-top-container{
+    text-align: center;
+}
+
+.header-container{
+    height: 50px;
+    width: 100vw;
+    .header-flux-container{
+        display: flex;
+        width: 100vw;
+        height: 50px;
+        background-color: #000000;
+        .header-flex-cell{
+            flex:1;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            text-align: center;
+            line-height: 250%;
+            word-break: break-all;
+            white-space: pre-line;
+            cursor: pointer;
+            color:#ffffff;
+            border-right: 1px solid #ffffff;
+        }
+    }
+}

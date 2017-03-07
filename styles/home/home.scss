@@ -1,0 +1,19 @@
+.home-container{
+    .home-title{
+        text-align: center;
+        padding:5px;
+        font-size: 17px;
+        height: 30px;
+    }
+    .home-flex-container{
+        display: flex;
+        .home-img-container{
+            margin-left: auto;
+            margin-right: auto;
+            .home-img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
