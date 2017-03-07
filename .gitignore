@@ -30,7 +30,9 @@ node_modules
 # Ignore build files
 public
 dist
-/www/*
+www/*.js
+www/*.css
+www/*.jpg
 
 # Cordova config
 /platforms/ios
