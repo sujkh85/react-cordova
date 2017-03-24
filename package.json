@@ -9,8 +9,8 @@
     "start": "NODE_ENV=development webpack-dev-server --progress --profile --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "dev": " webpack-dashboard -- webpack-dev-server --progress --profile --colors",
-    "ibuild": "NODE_ENV=production webpack --config webpack.production.config.js --progress --profile --colors && cordova build ios",
-    "abuild": "NODE_ENV=production webpack --config webpack.production.config.js --progress --profile --colors && cordova build android",
+    "ibuild": "cordova build ios",
+    "abuild": "cordova build android",
     "iemul": "cordova emulate ios",
     "aemul": "cordova emulate android"
   },
