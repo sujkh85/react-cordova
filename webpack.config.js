@@ -5,6 +5,8 @@ var loaders = require('./webpack.loaders');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var autoprefixer = require('autoprefixer');
+var rucksack = require('rucksack-css');
 
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = process.env.PORT || "8888";
@@ -19,7 +21,7 @@ module.exports = {
 	entry: [
 		'react-hot-loader/patch',
 		'./src/index.js', // your app's entry point
-		'./styles/index.scss'
+		'./index.scss'
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
 	output: {
@@ -45,6 +47,19 @@ module.exports = {
 		historyApiFallback: true,
 		port: PORT,
 		host: HOST
+	},
+	postcss: function() {
+		return [
+			autoprefixer({
+				browsers: [
+				'>1%',
+				'last 4 versions',
+				'Firefox ESR',
+				'not ie < 9', // React doesn't support IE8 anyway
+				]
+			}),
+			rucksack()
+		];
 	},
 	plugins: [
 		new webpack.NoErrorsPlugin(),
